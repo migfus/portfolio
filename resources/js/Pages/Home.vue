@@ -2,14 +2,14 @@
   <!-- <Nav /> -->
 
   <section class="">
-    <div class="p-4">
+    <div class="sm:p-4">
 
 
       <div class="grid grid-cols-1 gap-4 list-none lg:grid-cols-3 lg:grid-rows-3 xl:grid-cols-4 xl:grid-rows-4">
 
         <!-- WELCOME -->
-        <CardLayout class="lg:row-span-2" :delay="10000">
-          <div class="relative flex items-center gap-x-4">
+        <CardLayout class="lg:row-span-2 p-8" :delay="10000">
+          <div class="relative flex items-center gap-x-4 mb-2">
             <img
               src="/images/avatar.jpg"
               alt=""
@@ -22,20 +22,33 @@
                   Schwarzenegger R. Belonio
                 </a>
               </p>
-              <p class="text-zinc-500 dark:text-zinc-400">
-
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="h-4 inline-block flex-row justify-center mr-1">
-                  <path fill="#7E7F85" d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/>
-                </svg>
-                Web Developer |
-
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"  class="h-4 inline-block flex-row justify-center mr-1">
-                  <path fill="#7E7F85" d="M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7v72V368c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V147L192 223.8V432c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V200 128c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-1.1 28.3 5z"/>
-                </svg>
-                BGM Composer
-              </p>
             </div>
           </div>
+
+          <p class="text-zinc-500 dark:text-zinc-400 flex flex-wrap gap-2">
+
+            <div class="rounded-xl shadow-xl bg-[#262626] p-1 px-3 text-nowrap">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="h-4 inline-block flex-row justify-center mr-1 mb-1">
+                <path fill="#7E7F85" d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/>
+              </svg>
+              <span>Web Developer</span>
+            </div>
+
+
+            <div class="rounded-xl shadow-xl bg-[#262626] p-1 px-3 text-nowrap">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"  class="h-4 inline-block flex-row justify-center mr-1 mb-1">
+                <path fill="#7E7F85" d="M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7v72V368c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V147L192 223.8V432c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V200 128c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-1.1 28.3 5z"/>
+              </svg>
+              BGM Composer
+            </div>
+
+            <div class="rounded-xl shadow-xl bg-[#262626] p-1 px-3 text-nowrap">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"  class="h-4 inline-block flex-row justify-center mr-1 mb-1">
+                <path fill="#7E7F85" d="M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7v72V368c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V147L192 223.8V432c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V200 128c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-1.1 28.3 5z"/>
+              </svg>
+              DJI Drone Operator
+            </div>
+          </p>
           <p
             class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary dark:text-white"
           >
@@ -52,7 +65,7 @@
         </CardLayout>
 
         <!-- FIND ME -->
-        <CardLayout class="flex flex-col" :delay="100">
+        <CardLayout class="flex flex-col p-8" :delay="100">
           <div class="w-full">
             <p
               class="text-xl font-normal tracking-tight text-primary dark:text-white lg:text-8xl"
@@ -212,7 +225,7 @@
         </CardLayout>
 
         <!-- LOOKING FOR MUSIC? -->
-        <CardLayout :delay="200" class="flex flex-col justify-between items-center overflow-hidden text-center lg:text-left pb-12">
+        <CardLayout :delay="200" class="flex flex-col justify-between items-center overflow-hidden text-center lg:text-left pb-12 p-8">
           <div class="w-full">
             <p class="text-xl text-primary dark:text-white lg:text-4xl tracking-tight">
               Looking for my <span class="text-yellow-600">Web Projects</span>?
@@ -220,27 +233,28 @@
             <div class="w-full mt-8 mb-10">
               <AppButton>
                 <a href="https://web.migfus.net" class="flex justify-center">
-                  <span class="text-yellow-600">web</span>.migfus.net
+                  <span class="text-yellow-600">webproject</span>.migfus.net
                 </a>
-            </AppButton>
+              </AppButton>
             </div>
 
             <p class="text-xl text-primary dark:text-white lg:text-4xl tracking-tight">
               Or my <span class="text-green-600">music</span>?
             </p>
             <div class="w-full mt-8 lg:max-w-none">
-              <AppButton>
-                <a href="https://web.migfus.net" class="flex justify-center">
-                  <span class="text-green-500 dark:text-green-600">bgm</span>.migfus.net
+                <a href="https://migset.migfus.net" >
+                  <AppButton class="">
+                    <span class="text-green-500 dark:text-green-600 inline-block">migset</span>
+                    <span>.migfus.net</span>
+                  </AppButton>
                 </a>
-              </AppButton>
             </div>
           </div>
 
         </CardLayout>
 
         <!-- DEVELOPMENT ENVIRONMENT -->
-        <CardLayout :delay="300" class="lg:row-span-1 lg:row-start-2 lg:gap-0 lg:grid-cols-none lg:col-start-2 lg:col-span-2 ">
+        <CardLayout :delay="300" class="lg:row-span-1 lg:row-start-2 lg:gap-0 lg:grid-cols-none lg:col-start-2 lg:col-span-2 p-8">
 
           <p class="ext-xl tracking-tight font-medium text-primary dark:text-white md:text-5xl mb-6">
             Web Dev Environment
@@ -430,7 +444,7 @@
         </CardLayout>
 
         <!-- WEB PROJECTS -->
-        <CardLayout :delay="400" class="lg:row-start-3 lg:col-span-3">
+        <CardLayout :delay="400" class="lg:row-start-3 lg:col-span-3 p-8">
           <p class="ext-xl tracking-tight font-medium text-primary dark:text-white md:text-5xl mb-6">
             Web Projects
           </p>
@@ -448,7 +462,7 @@
         </CardLayout>
 
         <!-- POSTS -->
-        <CardLayout :delay="500" class="lg:row-span-2 overflow-hidden duration-300 ">.
+        <CardLayout :delay="500" class="lg:row-span-2 overflow-hidden duration-300 p-8">.
           <div v-for="row in posts" :key="row.id" class="mb-6">
             <div class="relative flex items-center gap-x-4">
             <img
@@ -464,7 +478,7 @@
                 </a>
               </p>
               <p class="text-zinc-500 dark:text-zinc-400">
-                {{ row.role }} * {{ moment(row.created_at).fromNow(true) }}
+                {{ row.role }} ● {{ moment(row.created_at).fromNow(true) }}
               </p>
             </div>
           </div>
@@ -483,84 +497,55 @@
 
         </CardLayout>
 
-        <CardLayout :delay="600" class="flex flex-col h-full justify-center items-center overflow-hidden relative lg:col-span-2 lg:row-start-4 ">
-
-          <div class="relative p-8 text-center w-full">
-            <p
-              class="text-xl tracking-tight font-medium text-primary dark:text-white md:text-6xl"
-            >
-              Subscribe <span class="lg:block">to my updates</span>
-            </p>
-            <form class="mt-6 sm:flex w-full lg:max-w-sm mx-auto">
-              <label for="email-address" class="sr-only">Email address</label>
-              <input
-                type="email"
-                name="email-address"
-                id="email-address"
-                autocomplete="email"
-                required
-                class="block w-full h-12 px-4 py-2 text-sm text-zinc-500 bg-zinc-100 dark:bg-tertiary ring-1 dark:ring-white/10 ring-primary/5 rounded-lg appearance-none focus:ring-white/20 placeholder-zinc-400 focus:border-zinc-300 focus:bg-primary focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                placeholder="Enter your email"
-              />
-              <div class="mt-4 sm:ml-2 sm:mt-0 sm:flex-shrink-0">
-                <button
-                  type="submit"
-                  class="text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-primary dark:bg-white dark:text-primary dark:hover:text-white hover:text-primary dark:hover:bg-white/5 hover:bg-primary/10 text-white flex duration-200 focus:ring-offset-2 focus:ring-inline-flex items-center justify-between"
-                  >Subscribe</button
-                >
-              </div>
-            </form>
-          </div>
+        <!-- YT VIDEO -->
+        <CardLayout :delay="600" class="flex flex-col h-full justify-center items-center overflow-hidden relative lg:col-span-2 lg:row-start-4" injectClass="p-0">
+          <!-- <iframe  src="https://www.youtube.com/embed/L_gGKD8UNKA?autoplay=1&showinfo=0&controls=0" title="Youtube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+          <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/WpU4kuhf5WQ?si=FM3tMM3XCml3tmX4&controls=0&autoplay=1&showinfo=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </CardLayout>
 
-        <CardLayout :delay="700" class="lg:row-start-4 h-full flex flex-col justify-between ">
+        <!--  -->
+        <CardLayout :delay="700" class="lg:row-start-4 h-full flex flex-col justify-between p-8">
           <p class="text-xl tracking-tight font-medium text-primary dark:text-white md:text-5xl">
-            Testimonials
+            Download this portfolio
           </p>
           <div class="md:grid md:grid-cols-2 gap-6 lg:grid-cols-1">
             <div class="mt-4">
-              <p class="text-sm text-pink-500 dark:text-pink-400">
-                "Big fan of your themes. They're well-organized, look clean, and
-                are fast."
-              </p>
-              <p class="text-xs mt-2 text-zinc-500">
-                <span class="block text-xs">Kevin Focke</span>
-                <span class="block text-xs"> Developer</span>
-              </p>
+              <a href="https://github.com/migfus/portfolio" class="text-sm text-pink-500 dark:text-pink-400">
+                https://github.com/migfus/portfolio
+              </a>
+
+
+              <div class="flex">
+                <AppSocial href="https://github.com/migfus/portfolio" class="mt-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-brand-github h-6 w-6 group-hover:scale-125 duration-300 text-primary dark:text-white group-hover text-primary:dark:text-white/50"
+                    viewBox="0 0 24 24"
+                    stroke-width="0.8"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                  </svg>
+                </AppSocial>
+                <span class="text-gray-200 ml-2 mt-4">Github</span>
+              </div>
             </div>
-            <div class="mt-4">
-              <p class="text-sm text-orange-500 dark:text-orange-300">
-                "Amazing resource using @astrodotbuild and @tailwindcss! I got it
-                a week ago and have found the contents really useful. 5/5
-              </p>
-              <p class="text-xs mt-2 text-zinc-500">
-                <span class="block text-xs">Alonso</span>
-                <span class="block text-xs"> Entrepreneur</span>
-              </p>
-            </div>
+
+
           </div>
         </CardLayout>
 
+        <!-- TERMINAL -->
+        <AppCommand class="lg:col-span-2 xl:col-span-1 h-full flex flex-col justify-between lg:row-span-2"></AppCommand>
 
-        <CardLayout :delay="800" class="lg:col-span-2 xl:col-span-1 h-full flex flex-col justify-between lg:row-span-2">
-          <p class="text-xl tracking-tight font-medium text-primary dark:text-white md:text-3xl">
-            Configure
-            <br />
-            <br />
-
-            <label for="default-range" class="block mb-2 text-sm font-medium text-white">Color</label>
-            <input id="default-range" type="range" value="0" class="mb-5 w-full h-8 rounded-xl appearance-none cursor-pointer bg-[#262626] px-3 accent-[#ECECEC]">
-
-            <label for="default-range" class="block mb-2 text-sm font-medium text-white">Corners</label>
-            <input id="default-range" type="range" value="100" class="mb-5 w-full h-8 rounded-xl appearance-none cursor-pointer bg-[#262626] px-3 accent-[#ECECEC]">
-
-            <label for="default-range" class="block mb-2 text-sm font-medium text-white">Corners</label>
-            <input id="default-range" type="range" value="0" class="mb-5 w-full h-8 rounded-xl appearance-none cursor-pointer bg-[#262626] px-3 accent-[#ECECEC]">
-
-          </p>
+        <!-- FOOTEr -->
+        <!-- <CardLayout :delay="800" class="flex flex-col h-full justify-center items-center overflow-hidden relative lg:col-span-2 lg:row-start-4 cols-span-4" >
           <p class="text-primary dark:text-white mt-4">version 0.0.1</p>
-
-        </CardLayout>
+        </CardLayout> -->
       </div>
     </div>
   </section>
@@ -576,6 +561,7 @@ import AppSocial from '@/Shared/AppSocial.vue'
 import AppButton from '@/Shared/AppButton.vue'
 import AppLogo from '@/Shared/AppLogo.vue'
 import AppProject from '@/Shared/AppProject.vue'
+import AppCommand from '@/Shared/AppCommand.vue'
 
 const posts = ref([
   {
@@ -583,33 +569,33 @@ const posts = ref([
     avatar: '/images/avatar.jpg',
     name: 'Schwarzenegger R. Belonio',
     role: 'Admin',
-    created_at: '2024-02-18 18:11',
-    content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker incl`
+    created_at: '2024-03-01 09:11',
+    content: `My first web portfolio 😎`
   },
-  {
-    id: 123,
-    avatar: '/images/avatar.jpg',
-    name: 'Schwarzenegger R. Belonio',
-    role: 'Admin',
-    created_at: '2024-02-18 18:11',
-    content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker incl`
-  },
-  {
-    id: 124,
-    avatar: '/images/avatar.jpg',
-    name: 'Schwarzenegger R. Belonio',
-    role: 'Admin',
-    created_at: '2024-02-18 18:11',
-    content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker incl`
-  },
-  {
-    id: 126,
-    avatar: '/images/avatar.jpg',
-    name: 'Schwarzenegger R. Belonio',
-    role: 'Admin',
-    created_at: '2024-02-18 18:11',
-    content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker incl`
-  },
+  // {
+  //   id: 123,
+  //   avatar: '/images/avatar.jpg',
+  //   name: 'Schwarzenegger R. Belonio',
+  //   role: 'Admin',
+  //   created_at: '2024-02-18 18:11',
+  //   content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker incl`
+  // },
+  // {
+  //   id: 124,
+  //   avatar: '/images/avatar.jpg',
+  //   name: 'Schwarzenegger R. Belonio',
+  //   role: 'Admin',
+  //   created_at: '2024-02-18 18:11',
+  //   content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker incl`
+  // },
+  // {
+  //   id: 126,
+  //   avatar: '/images/avatar.jpg',
+  //   name: 'Schwarzenegger R. Belonio',
+  //   role: 'Admin',
+  //   created_at: '2024-02-18 18:11',
+  //   content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker incl`
+  // },
 ])
 
 const projects = ref([
@@ -638,4 +624,6 @@ const projects = ref([
     href: 'https://js.cmu.edu.ph'
   },
 ])
+
+const color = ref('262626')
 </script>
