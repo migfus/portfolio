@@ -1,5 +1,5 @@
 <template>
-  <VueCommand :commands="commands" class="sm:rounded-3xl h-full">
+  <VueCommand :commands="commands" v-model="options" class="sm:rounded-3xl h-full" >
     <template #title>
       Terminal 😎
     </template>
@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import VueCommand from "vue-command"
 import * as VueCom from "vue-command"
 import "vue-command/dist/vue-command.css"
@@ -50,7 +50,19 @@ const commands = ref({
   },
 })
 
+const options = ref({
+  invert: true
+})
+
 const cd = ref('https://migfus.net/$\xa0');
+
+VueCom.invert = true
+
+onMounted(() => {
+  if(window.matchMedia('(prefers-color-scheme: light)').matches ? true : false) {
+    VueCom.invert = true
+  }
+})
 </script>
 
 <style>
