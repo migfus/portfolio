@@ -59,19 +59,54 @@ const cd = ref('https://migfus.net/$\xa0');
 VueCom.invert = true
 
 onMounted(() => {
-  if(window.matchMedia('(prefers-color-scheme: light)').matches ? true : false) {
-    VueCom.invert = true
+  let commandHeader = document.getElementsByClassName("vue-command__bar");
+  let commandHistory = document.getElementsByClassName("vue-command__history");
+  let commandQuery = document.getElementsByClassName("vue-command__query__input");
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    for(let i = 0; i < commandHeader.length; i++) {
+      commandHeader[i].className += " dark-command-h"
+      commandHistory[i].className += " dark-command-body"
+      commandQuery[i].className += " dark-query"
+    }
+  }
+  else {
+    for(let i = 0; i < commandHeader.length; i++) {
+      commandHeader[i].className += " white-command-h"
+      commandHistory[i].className += " white-command-body"
+      commandQuery[i].className += " white-query"
+    }
   }
 })
+
 </script>
 
 <style>
-.vue-command .vue-command__bar {
-  background: #252525;
-  padding-top: 20px;
+.dark-command-h {
+  background: #252525 !important;
+  padding-top: 20px !important;
+  color: #FAFAFA !important;
 }
-.vue-command .vue-command__history {
-  background: #1A1A1A
+.white-command-h {
+  background: #FAFAFA !important;
+  padding-top: 20px !important;
+  color: #252525 !important;
+}
+.dark-command-body {
+  background: #252525 !important;
+  padding-top: 20px !important;
+  color: #FAFAFA !important;
+}
+.white-command-body {
+  background: #ECECEC !important;
+  padding-top: 20px !important;
+  color: #252525 !important;
+}
+
+.dark-query {
+  color: #FAFAFA !important;
+}
+.white-query {
+  color: #252525 !important;
 }
 
 </style>

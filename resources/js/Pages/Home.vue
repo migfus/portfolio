@@ -458,11 +458,19 @@
 
                 <span
                   :class="[
-                    'inline-flex items-center rounded-xl px-2 py-1 text-xs font-sm absolute top-2 right-2',
+                    'inline-flex items-center rounded-xl px-2 py-1 text-xs font-sm absolute top-2 left-2',
                     `text-tertiary dark:text-white dark:bg-secondary bg-white`
                   ]"
                 >
                   {{ row.badge }}
+                </span>
+                <span
+                  :class="[
+                    'inline-flex items-center rounded-xl px-2 py-1 text-xs font-sm absolute top-2 right-2',
+                    `text-tertiary dark:text-white dark:bg-secondary bg-white`
+                  ]"
+                >
+                  {{ row.year }}
                 </span>
               </AppProject>
               <div class="flex justify-center">
@@ -474,27 +482,32 @@
 
         <!-- POSTS -->
         <CardLayout :delay="500" class="lg:row-span-2 overflow-hidden duration-300 p-8">.
-          <div v-for="row in posts" :key="row.id" class="mb-6">
+          <div v-for="row in $props.posts" :key="row.id" class="mb-6">
             <div class="relative flex items-center gap-x-4">
             <img
-              :src="row.avatar"
-              :alt="`${row.name} avatar or profile picture`"
+              :src="row.user.avatar"
+              :alt="row.user.name + ` avatar or profile picture`"
               class="h-10 w-10 rounded-full ring-1 dark:ring-white/10 ring-primary/5"
             />
             <div class="text-sm leading-6">
               <p class="font-semibold text-primary dark:text-white">
                 <a href="#" class="truncate text-ellipsis">
                   <span class="absolute inset-0"></span>
-                  {{ row.name }}
+                  {{ row.user.name }}
                 </a>
               </p>
               <p class="text-zinc-500 dark:text-zinc-400">
-                {{ row.role }} ● {{ moment(row.created_at).fromNow(true) }}
+                Admin ● {{ moment(row.created_at).fromNow(true) }}
               </p>
             </div>
           </div>
-          <p class="mt-4 text-zinc-500 dark:text-zinc-400 line-clamp-3">
-            {{ row.content }}
+
+          <p v-if="JSON.parse(row.content).type == 'embed'" class="mt-4 text-zinc-500 dark:text-zinc-400 line-clamp-3">
+            {{ JSON.parse(row.content).content }}
+            <div v-html="JSON.parse(row.content).attached" class="mt-2"></div>
+          </p>
+          <p v-else class="mt-4 text-zinc-500 dark:text-zinc-400 line-clamp-3">
+            {{ JSON.parse(row.content).content }}
           </p>
 
           <hr class="mt-4 border-gray-600">
@@ -552,11 +565,6 @@
 
         <!-- TERMINAL -->
         <AppCommand class="lg:col-span-2 xl:col-span-1 h-full flex flex-col justify-between lg:row-span-2"></AppCommand>
-
-        <!-- FOOTEr -->
-        <!-- <CardLayout :delay="800" class="flex flex-col h-full justify-center items-center overflow-hidden relative lg:col-span-2 lg:row-start-4 cols-span-4" >
-          <p class="text-primary dark:text-white mt-4">version 0.0.1</p>
-        </CardLayout> -->
       </div>
     </div>
   </section>
@@ -574,6 +582,19 @@ import AppLogo from '@/Shared/AppLogo.vue'
 import AppProject from '@/Shared/AppProject.vue'
 import AppCommand from '@/Shared/AppCommand.vue'
 
+const $props = defineProps<{
+  posts: {
+    id: string
+    content: string
+    created_at: Date
+    user: {
+      id: string
+      avatar: string
+      name: string
+      created_at: Date
+    }
+  }[]
+}>()
 
 const posts = ref([
   {
@@ -612,16 +633,25 @@ const posts = ref([
 
 const projects = ref([
   {
+    image: 'https://fchhis.migfus.net/images/logo.png',
+    title: 'FCCHIS',
+    year: 2023,
+    badge: 'Private',
+    href: 'https://fchhis.migfus.net',
+  },
+  {
     image: 'https://js.cmu.edu.ph/images/header-icon.png',
     title: 'CMU Journal of Science',
+    year: 2018,
     badge: 'Private',
     href: 'https://js.cmu.edu.ph',
   },
   {
-    image: 'https://fchhis.migfus.net/images/logo.png',
-    title: 'FCCHIS',
-    badge: 'Private',
-    href: 'https://fchhis.migfus.net',
+    image: 'https://talkibanny.migfus.net/Images/System/WhiteIcon.png',
+    title: 'Talkibanny',
+    year: 2017,
+    badge: 'Student Project',
+    href: 'https://talkibanny.migfus.net',
   },
   // {
   //   id: 2,
@@ -644,3 +674,11 @@ const projects = ref([
 ])
 
 </script>
+
+<style>
+iframe {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  border-radius: 20px;
+}
+</style>
