@@ -13,6 +13,6 @@ class UserSeeder extends Seeder
       'email' => 'migfus20@gmail.com',
       'avatar' => '/images/avatar.jpg',
       'password' => bcrypt('@Onodera.09109123')
-    ]);
+    ])->assignRole('admin');
   }
 }
