@@ -497,7 +497,7 @@
                 </a>
               </p>
               <p class="text-zinc-500 dark:text-zinc-400">
-                Admin ● {{ moment(row.created_at).fromNow(true) }}
+                <!-- {{  row.user.role!.name || 'n/a'}} ● {{ moment(row.created_at).fromNow(true) }} -->
               </p>
             </div>
           </div>
@@ -574,6 +574,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import moment from 'moment'
+import type { GPost } from '@/globalTypes'
 
 import CardLayout from '@/Shared/CardLayout.vue'
 import AppSocial from '@/Shared/AppSocial.vue'
@@ -583,17 +584,7 @@ import AppProject from '@/Shared/AppProject.vue'
 import AppCommand from '@/Shared/AppCommand.vue'
 
 const $props = defineProps<{
-  posts: {
-    id: string
-    content: string
-    created_at: Date
-    user: {
-      id: string
-      avatar: string
-      name: string
-      created_at: Date
-    }
-  }[]
+  posts: GPost []
 }>()
 
 const projects = ref([

@@ -12,7 +12,11 @@ class HomeController extends Controller
   public function index() {
 
     $posts = Post::query()
-      ->with('user')
+      ->with(['user' => function($q) {
+        return $q->with(['roles' => function($qu) {
+          return $qu->first();
+        }]);
+      }])
       ->limit(5)
       ->orderBy('created_at', 'DESC')
       ->get();
