@@ -452,7 +452,7 @@
           </p>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            <a v-for="row in projects" :key="row.title" :href="row.href" class="grid justify-center">
+            <a v-for="row in $props.projects" :key="row.name" :href="row.project_url" class="grid justify-center">
               <AppProject class="relative opacity-75">
                 <img :src="row.image" class="h-24 w-24" />
 
@@ -462,7 +462,7 @@
                     `text-tertiary dark:text-white dark:bg-secondary bg-white`
                   ]"
                 >
-                  {{ row.badge }}
+                  {{ row.project_type.name }}
                 </span>
                 <span
                   :class="[
@@ -474,7 +474,7 @@
                 </span>
               </AppProject>
               <div class="flex justify-center">
-                <p class="text-gray-600 mt-2 dark:text-gray-300">{{ row.title }}</p>
+                <p class="text-gray-600 mt-2 dark:text-gray-300">{{ row.name }}</p>
               </div>
             </a>
           </div>
@@ -496,8 +496,8 @@
                   {{ row.user.name }}
                 </a>
               </p>
-              <p class="text-zinc-500 dark:text-zinc-400">
-                <!-- {{  row.user.role!.name || 'n/a'}} ● {{ moment(row.created_at).fromNow(true) }} -->
+              <p v-if="row.user.roles" class="text-zinc-500 dark:text-zinc-400">
+                {{ row.user.roles[0].name || 'n/a' }} ● {{ moment(row.created_at).fromNow(true) }}
               </p>
             </div>
           </div>
@@ -574,7 +574,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import moment from 'moment'
-import type { GPost } from '@/globalTypes'
+import type { GPost, GProject } from '@/globalTypes'
 
 import CardLayout from '@/Shared/CardLayout.vue'
 import AppSocial from '@/Shared/AppSocial.vue'
@@ -584,7 +584,8 @@ import AppProject from '@/Shared/AppProject.vue'
 import AppCommand from '@/Shared/AppCommand.vue'
 
 const $props = defineProps<{
-  posts: GPost []
+  posts: GPost [],
+  projects: GProject[]
 }>()
 
 const projects = ref([

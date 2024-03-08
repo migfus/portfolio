@@ -9,6 +9,7 @@ class UserSeeder extends Seeder
 {
   public function run(): void {
     User::create([
+      'id' => env('DB_USER_MIGFUS'),
       'name' => 'Schwarzenegger R. Belonio',
       'email' => 'migfus20@gmail.com',
       'avatar' => '/images/avatar.jpg',
