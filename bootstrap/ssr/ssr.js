@@ -53,7 +53,7 @@ createServer(
     page,
     render: renderToString,
     resolve: async (name) => {
-      let page2 = (await __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./Pages/Home.vue": () => import("./assets/Home-CCZGJ5bU.js"), "./Pages/Settings.vue": () => import("./assets/Settings-Ipn4lTMu.js"), "./Pages/Users.vue": () => import("./assets/Users-awrI-JnC.js") }), `./Pages/${name}.vue`)).default;
+      let page2 = (await __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./Pages/Users.vue": () => import("./assets/Users-ZtcKgNA9.js") }), `./Pages/${name}.vue`)).default;
       page2.layout ?? (page2.layout = _sfc_main);
       return page2;
     },
@@ -64,6 +64,3 @@ createServer(
     }
   })
 );
-export {
-  _export_sfc as _
-};

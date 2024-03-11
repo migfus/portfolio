@@ -56,7 +56,7 @@ const options = ref({
 
 const cd = ref('https://migfus.net/$\xa0');
 
-VueCom.invert = true
+// VueCom.invert = true
 
 onMounted(() => {
   let commandHeader = document.getElementsByClassName("vue-command__bar");

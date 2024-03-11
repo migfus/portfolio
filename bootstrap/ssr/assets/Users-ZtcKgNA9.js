@@ -1,6 +1,6 @@
 import { defineComponent, resolveComponent, mergeProps, withCtx, renderSlot, useSSRContext, createTextVNode } from "vue";
 import { ssrRenderComponent, ssrRenderSlot } from "vue/server-renderer";
-const _sfc_main$1 = /* @__PURE__ */ defineComponent({
+const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   __name: "NavLink",
   __ssrInlineRender: true,
   props: {
@@ -29,20 +29,20 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _sfc_setup$1 = _sfc_main$1.setup;
-_sfc_main$1.setup = (props, ctx) => {
+const _sfc_setup$2 = _sfc_main$2.setup;
+_sfc_main$2.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Shared/NavLink.vue");
-  return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
+  return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
-const _sfc_main = /* @__PURE__ */ defineComponent({
+const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   __name: "Nav",
   __ssrInlineRender: true,
   setup(__props) {
     return (_ctx, _push, _parent, _attrs) => {
       const _component_Link = resolveComponent("Link");
       _push(`<!--[--><h1>Links</h1><li>`);
-      _push(ssrRenderComponent(_sfc_main$1, {
+      _push(ssrRenderComponent(_sfc_main$2, {
         href: "/",
         active: _ctx.$page.component == "Home"
       }, {
@@ -57,7 +57,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$1, {
+      _push(ssrRenderComponent(_sfc_main$2, {
         href: "/settings",
         active: _ctx.$page.component == "Settings"
       }, {
@@ -72,7 +72,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$1, {
+      _push(ssrRenderComponent(_sfc_main$2, {
         href: "/users",
         active: _ctx.$page.component == "Users"
       }, {
@@ -108,12 +108,29 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     };
   }
 });
+const _sfc_setup$1 = _sfc_main$1.setup;
+_sfc_main$1.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Shared/Nav.vue");
+  return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
+};
+const _sfc_main = /* @__PURE__ */ defineComponent({
+  __name: "Users",
+  __ssrInlineRender: true,
+  setup(__props) {
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<!--[-->`);
+      _push(ssrRenderComponent(_sfc_main$1, null, null, _parent));
+      _push(`<h1>Users</h1><!--]-->`);
+    };
+  }
+});
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Shared/Nav.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Users.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
 export {
-  _sfc_main as _
+  _sfc_main as default
 };

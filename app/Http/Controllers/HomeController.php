@@ -10,7 +10,6 @@ use App\Models\Project;
 class HomeController extends Controller
 {
   public function index() {
-
     $projects = Project::query()
       ->with(['user', 'project_type'])
       ->orderBy('created_at', 'DESC')
@@ -27,7 +26,7 @@ class HomeController extends Controller
       ->limit(5)
       ->get();
 
-    return Inertia::render('Home', [
+    return Inertia::render('Home/Index', [
       'posts' => $posts,
       'projects' => $projects,
     ]);

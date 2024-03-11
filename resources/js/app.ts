@@ -3,9 +3,10 @@ import { createInertiaApp, Link } from '@inertiajs/vue3'
 import Layout from './Layout/BaseLayout.vue'
 
 createInertiaApp({
-  resolve: async name => {
-    let page = (await import(`./Pages/${name}.vue`)).default
-    page.layout ??= Layout
+  resolve: name => {
+    const pages = import.meta.glob('./Pages/**/*.vue', { eager: true })
+    let page = pages[`./Pages/${name}.vue`] as any //Yey! I guess...😅
+    page.default.layout = page.default.layout || Layout
     return page
   },
   setup({ el, App, props, plugin }) {

@@ -481,7 +481,7 @@
         </CardLayout>
 
         <!-- POSTS -->
-        <CardLayout :delay="500" class="lg:row-span-2 overflow-hidden duration-300 p-8">.
+        <CardLayout :delay="500" class="lg:row-span-2 overflow-hidden duration-300 p-8">
           <div v-for="row in $props.posts" :key="row.id" class="mb-6">
             <div class="relative flex items-center gap-x-4">
             <img
@@ -510,7 +510,7 @@
             {{ JSON.parse(row.content).content }}
           </p>
 
-          <hr class="mt-4 border-gray-600">
+          <hr class="mt-4 border-primary/10 dark:border-white/25">
         </div>
 
         <AppButton>
