@@ -15,9 +15,9 @@
       Or my <span class="text-green-600">music</span>?
     </p>
     <div class="w-full mt-8 lg:max-w-none">
-        <a href="https://migset.migfus.net" >
+        <a href="https://mysset.migfus.net" >
           <AppButton class="">
-            <span class="text-green-500 dark:text-green-600 inline-block">migset</span>
+            <span class="text-green-500 dark:text-green-600 inline-block">mysset</span>
             <span>.migfus.net</span>
           </AppButton>
         </a>

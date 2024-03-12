@@ -8,29 +8,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Michael Andreuzza" />
+    <meta name="author" content="Schwarzenegger R. Belonio" />
     <meta
-      name="your keywords"
-      content="wallpaper,black wallpaper, gradient wallpaper,aesthetic wallpaper,iphone wallpaper,wallpaper iphone,white wallpaper,pink wallpaper"
+      name="keywords"
+      content="drone, dji mini 2, Schwarzenegger Belonio, portfolio, web developer, assets, cinematic, videos, music, bgm, background music"
     />
-    <!-- Favicon guidelines generated with https://realfavicongenerator.net/ -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/favicons/apple-touch-icon.png"
+    <meta
+      name="description"
+      content="Schwarzenegger R. Belonio (Migfus) portfolio website."
     />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicons/favicon-32x32.png"
-    />
+
     <link
       rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/favicons/favicon-16x16.png"
+      type="image/svg"
+      href="/images/icon.svg"
     />
+
     <title>Portfolio | Schwarzenegger Belonio</title>
     <link rel="manifest" href="/favicons/site.webmanifest" />
     <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#1b1d20" />

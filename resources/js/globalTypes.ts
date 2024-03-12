@@ -1,35 +1,35 @@
-type GRole = {
+type TRole = {
   name: string
 }
 
-export type GUser = {
+export type GTUser = {
   avatar: string
   created_at: Date
   email: string
   id: string
   name: string
-  roles?: GRole[]
+  roles?: TRole[]
 }
 
-export type GPost = {
+export type GTPost = {
   content: string
   created_at: Date
   id: string
-  user: GUser
+  user: GTUser
 }
 
-export type GProject = {
+export type GTProject = {
   id: string
   name: string
   image: string
   year: BigInteger
   project_url: string
   creted_at: Date
-  project_type: GProjectType
+  project_type: TProjectType
 }
 
 
-type GProjectType = {
+type TProjectType = {
   name: string
   created_at: Date
 }

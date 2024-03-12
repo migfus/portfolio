@@ -1,8 +1,8 @@
 <template>
   <div class="relative flex items-center gap-x-4 mb-2">
     <img
-      src="/images/avatar.jpg"
-      alt=""
+      src="/images/icon.svg"
+      alt="Migfus Logo"
       class="h-10 w-10 rounded-full ring-1 dark:ring-white/10 ring-primary/5"
     />
     <div class="text-sm leading-6">
@@ -28,14 +28,10 @@
       DJI Drone Operator
     </AppBadge>
   </div>
-  <p
-    class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary dark:text-white"
-  >
+  <p class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary dark:text-white">
     Hey, welcome to my portfolio!
   </p>
-  <p
-    class="mt-4 text-sm text-zinc-500 dark:text-zinc-400 font-light lg:text-xl"
-  >
+  <p class="mt-4 text-sm text-zinc-500 dark:text-zinc-400 font-light lg:text-xl">
     I'm passionate about both technology and music. As a web developer, I bring websites and applications to life using Laravel, Vue, and Inertia.
     <br />
     <br />

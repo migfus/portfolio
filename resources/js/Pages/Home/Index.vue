@@ -38,10 +38,14 @@
         </CardLayout>
 
         <!-- YT VIDEO -->
-        <CardLayout :delay="600" class="flex flex-col h-full justify-center items-center overflow-hidden relative lg:col-span-2 lg:row-start-4" injectClass="p-0">
-          <!-- <iframe  src="https://www.youtube.com/embed/L_gGKD8UNKA?autoplay=1&showinfo=0&controls=0" title="Youtube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-          <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/WpU4kuhf5WQ?si=FM3tMM3XCml3tmX4&controls=0&autoplay=1&showinfo=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </CardLayout>
+        <iframe
+          class="w-full aspect-video flex flex-col h-full justify-center items-center overflow-hidden relative lg:col-span-2 lg:row-start-4"
+          src="https://www.youtube.com/embed/WpU4kuhf5WQ?si=FM3tMM3XCml3tmX4&controls=0&autoplay=1&showinfo=0&mute=1"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        />
 
         <!-- DOWNLOAD PORTFOLIO-->
         <CardLayout :delay="700" class="lg:row-start-4 h-full flex flex-col justify-between p-8">
@@ -49,7 +53,7 @@
         </CardLayout>
 
         <!-- TERMINAL -->
-        <AppCommand class="lg:col-span-2 xl:col-span-1 h-full flex flex-col justify-between lg:row-span-2"></AppCommand>
+        <TerminalCard class="lg:col-span-2 xl:col-span-1 h-full flex flex-col justify-between lg:row-span-2" />
       </div>
     </div>
   </section>
@@ -57,10 +61,10 @@
 </template>
 
 <script setup lang="ts">
-import type { GPost, GProject } from '@/globalTypes'
+import type { GTPost, GTProject } from '@/globalTypes'
 
 import CardLayout from '@/Shared/CardLayout.vue'
-import AppCommand from '@/Shared/AppCommand.vue'
+import TerminalCard from './TerminalCard.vue'
 
 import DownloadPortfolioCard from './DownloadPortfolioCard.vue'
 import PostsCard from './PostsCard.vue'
@@ -71,8 +75,8 @@ import FindMeCard from './FindMeCard.vue'
 import WelcomeCard from './WelcomeCard.vue'
 
 const $props = defineProps<{
-  posts: GPost [],
-  projects: GProject[]
+  posts: GTPost [],
+  projects: GTProject[]
 }>()
 </script>
 

@@ -38,13 +38,13 @@
 </template>
 
 <script setup lang="ts">
-import type { GPost } from '@/globalTypes'
+import type { GTPost } from '@/globalTypes'
 import moment from 'moment'
 
 import AppButton from '@/Shared/AppButton.vue'
 
 const $props = defineProps<{
-  data: GPost[]
+  data: GTPost[]
 }>()
 </script>
 

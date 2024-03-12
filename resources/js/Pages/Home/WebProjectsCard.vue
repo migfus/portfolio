@@ -34,14 +34,10 @@
 </template>
 
 <script setup lang="ts">
-import type { GProject } from '@/globalTypes'
+import type { GTProject } from '@/globalTypes'
 import AppProject from '@/Shared/AppProject.vue'
 
 const $props = defineProps<{
-  data: GProject[]
+  data: GTProject[]
 }>()
 </script>
-
-<style scoped>
-
-</style>
