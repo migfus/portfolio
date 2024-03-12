@@ -1,7 +1,7 @@
 import { createInertiaApp } from '@inertiajs/vue3'
 import createServer from '@inertiajs/vue3/server'
 import { renderToString } from '@vue/server-renderer'
-import { DefineComponent, createSSRApp, h } from 'vue'
+import { createSSRApp, h } from 'vue'
 import Layout from './Layout/BaseLayout.vue'
 
 
@@ -10,8 +10,9 @@ createServer(page =>
     page,
     render: renderToString,
     resolve: async name => {
-      let page = (await import(`./Pages/${name}.vue`)).default
-      page.layout ??= Layout
+      const pages = import.meta.glob('./Pages/**/*.vue', { eager: true })
+      let page = pages[`./Pages/${name}.vue`] as any //Yey! I guess...😅
+      page.default.layout = page.default.layout || Layout
       return page
     },
     setup({ App, props, plugin }) {
