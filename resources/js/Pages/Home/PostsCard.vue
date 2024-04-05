@@ -31,9 +31,9 @@
   </div>
 
   <AppButton>
-    <div class="text-center">
-      More Posts...
-    </div>
+    <a href="https:\\miglify.migfus.net" class="text-center text-zinc-500 dark:text-zinc-400">
+      More on <span class="dark:text-[#F7F6F5] text-[#5C5650]">miglify.migfus.net</span>
+    </a>
   </AppButton>
 </template>
 

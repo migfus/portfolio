@@ -1,6 +1,7 @@
 import { createApp, h, DefineComponent } from 'vue'
 import { createInertiaApp, Link } from '@inertiajs/vue3'
 import Layout from './Layout/BaseLayout.vue'
+import "./echo"
 
 createInertiaApp({
   resolve: name => {

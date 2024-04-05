@@ -15,7 +15,7 @@
     </div>
   </div>
 
-  <div class="text-zinc-500 dark:text-zinc-400 gap-2 flex flex-wrap">
+  <div class="text-zinc-500 dark:text-zinc-400 gap-2 flex flex-wrap" @click="submit">
     <AppBadge :icon="faCode">
       Web Developer
     </AppBadge>
@@ -39,7 +39,21 @@
   </p>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import AppBadge from '@/Shared/AppBadge.vue'
 import { faCode, faMusic, faGamepad } from '@fortawesome/free-solid-svg-icons'
+import { router } from '@inertiajs/vue3'
+import { onMounted } from 'vue'
+
+
+function submit() {
+  router.post('/post', { test: 'test' })
+}
+
+onMounted(() => {
+  Echo.channel('test.channel')
+    .listen('TestUpdate', (e) => {
+      alert('Received submit')
+    });
+});
 </script>
